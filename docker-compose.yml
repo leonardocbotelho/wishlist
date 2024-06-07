@@ -1,0 +1,11 @@
+volumes:
+  db:
+    driver: local
+
+services:
+  db:
+    image: mongo:latest
+    ports:
+      - 27017:27017
+    volumes:
+      - db:/data/db
